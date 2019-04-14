@@ -69,3 +69,19 @@ print ("*********final corr results: *********")
 print(corr_football)
 print ("*********/ final corr results: *********")
 print("\n")
+
+names = corr_football.index.get_level_values(0).values
+
+baby = activity_names.loc[:,"Football babyyyyy"]
+print ("baby = "+baby)
+    
+
+for name in names:
+    # print (name)
+    rating = corr_football.loc[name,:]
+    print (rating)
+    print (rating["Correlation"])
+    print (rating["rating_counts"])
+
+
+
