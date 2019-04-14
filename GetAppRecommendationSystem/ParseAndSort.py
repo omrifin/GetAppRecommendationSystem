@@ -92,5 +92,3 @@ def ML(activityRankingCSV,activityCSV):
         print (rating["rating_counts"])
         print ("Your recommended sub categories is: "+str(activity_names.loc[name]["sub_id"]))
 
-
-ML("Data/activityRanking.csv","Data/activity.csv")
