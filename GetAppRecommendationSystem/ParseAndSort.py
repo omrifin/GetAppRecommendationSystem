@@ -71,17 +71,26 @@ print ("*********/ final corr results: *********")
 print("\n")
 
 names = corr_football.index.get_level_values(0).values
+print ("*********Activity Name: *********")
+print(activity_names)
+print ("*********/Activity Name: *********")
+print("\n")
 
-baby = activity_names.loc[:,"Football babyyyyy"]
-print ("baby = "+baby)
+# print (please)
+
+activity_names.set_index("name",inplace=True)
+
     
 
 for name in names:
-    # print (name)
+    print ("")
     rating = corr_football.loc[name,:]
-    print (rating)
+    # print (rating)
+    print (name)
     print (rating["Correlation"])
     print (rating["rating_counts"])
+    print ("Your recommended sub categories is: "+str(activity_names.loc[name]["sub_id"]))
+
 
 
 
